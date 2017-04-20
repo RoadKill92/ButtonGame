@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ButtonGame
@@ -29,6 +24,7 @@ namespace ButtonGame
         private void Form1_Load(object sender, EventArgs e)
         {
             buttonList = new List<Button>();
+
             // Go through the form’s controls and find all the "?" button controls
             // Placing them in your list.
             foreach (Control item in this.Controls)
@@ -38,19 +34,23 @@ namespace ButtonGame
                     buttonList.Add((Button)item);
                 }
             }
+            
             // Get file path that this executable loaded from
             string appPath = System.IO.Path.GetDirectoryName(Application.ExecutablePath);
+
             // Create file path to sound and image files
             string bellFilePath = System.IO.Path.Combine(appPath, BELL_FILE);
             string pictureFilePath = System.IO.Path.Combine(appPath, BUTTON_IMAGE_FILE);
+
             // Load bell sound file and sewing buttons picture file
             bell = new System.Media.SoundPlayer(bellFilePath);
             picture = new Bitmap(pictureFilePath);
+
             // initialize counts
             currentScore = 0;
             totalScore = 0;
             gameCount = 0;
-            hidingPlace = 0;
+            hidingPlace = 0;
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
@@ -105,7 +105,7 @@ namespace ButtonGame
             }
             // Format and display score information
             lblCurrent.Text = String.Format("Points Remaining: {0:N0}", currentScore);
-            lblTotal.Text = String.Format("Total Score: {0:N0} out of { 1:N0} games", totalScore, gameCount);
+            lblTotal.Text = String.Format("Total Score: {0:N0} out of {1:N0} games", totalScore, gameCount);
             lblCurrent.Refresh();
             lblTotal.Refresh();
         }

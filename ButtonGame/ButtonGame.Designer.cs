@@ -109,6 +109,7 @@
             this.button1.TabIndex = 11;
             this.button1.Text = "?";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -120,6 +121,7 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "?";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -131,6 +133,7 @@
             this.button4.TabIndex = 13;
             this.button4.Text = "?";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button3_Click);
             // 
             // button5
             // 
@@ -142,6 +145,7 @@
             this.button5.TabIndex = 14;
             this.button5.Text = "?";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button3_Click);
             // 
             // button6
             // 
@@ -153,6 +157,7 @@
             this.button6.TabIndex = 15;
             this.button6.Text = "?";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
